@@ -1,6 +1,5 @@
 package com.example.anniegif.repo
 
-import com.example.anniegif.model.GifInfo
 import com.example.anniegif.model.GifModel
 import com.example.anniegif.repo.remote.RetrofitInstance
 import retrofit2.Response

@@ -10,23 +10,22 @@ import com.example.anniegif.R
 import com.example.anniegif.databinding.ActivityGifItemBinding
 import com.example.anniegif.model.GifInfo
 import com.example.anniegif.view.FullScreenGifActivity
-import java.io.Serializable
 
-class AnnieGifAdapter()
+class AnnieGifAdapter
     : RecyclerView.Adapter<AnnieGifAdapter.AnnieGifViewHolder>() {
     private val gifInfoList = mutableListOf<GifInfo>()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): AnnieGifAdapter.AnnieGifViewHolder {
+    ): AnnieGifViewHolder {
         return AnnieGifViewHolder.getInstance(parent)
     }
 
-    override fun onBindViewHolder(holder: AnnieGifAdapter.AnnieGifViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AnnieGifViewHolder, position: Int) {
         holder.loadInfo(gifInfoList[position])
 
-        holder.itemView.setOnClickListener(){
+        holder.itemView.setOnClickListener {
             val intent = Intent(it.context, FullScreenGifActivity::class.java)
             intent.putExtra("gifInfoUrl", gifInfoList[position].url)
             it.context.startActivity(intent)
