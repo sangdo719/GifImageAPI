@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.CategoryActivity">
+    tools:context=".view.CategoryFragment">
 
     <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/sp_category"
@@ -15,7 +15,7 @@
         app:layout_constraintBottom_toTopOf="@id/rv_gif"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/et_amount"/>
+        app:layout_constraintEnd_toStartOf="@id/et_amount" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_amount"
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
-        tools:listitem="@layout/activity_gif_item"
+        tools:listitem="@layout/gif_item"
         />
 
 

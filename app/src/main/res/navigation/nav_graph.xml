@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/categoryFragment">
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.anniegif.view.CategoryFragment"
+        android:label="CategoryFragment" >
+        <action
+            android:id="@+id/goToFullScreenGifFragment"
+            app:destination="@id/fullScreenGifFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullScreenGifFragment"
+        android:name="com.example.anniegif.view.FullScreenGifFragment"
+        android:label="FullScreenGifFragment" >
+        <argument
+            android:name="item"
+            app:argType="com.example.anniegif.model.GifInfo" />
+    </fragment>
+</navigation>
