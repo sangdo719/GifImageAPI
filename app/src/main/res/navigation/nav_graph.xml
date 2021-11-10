@@ -7,7 +7,8 @@
     <fragment
         android:id="@+id/categoryFragment"
         android:name="com.example.anniegif.view.CategoryFragment"
-        android:label="CategoryFragment" >
+        android:label="CategoryFragment"
+        tools:layout="@layout/fragment_category">
         <action
             android:id="@+id/goToFullScreenGifFragment"
             app:destination="@id/fullScreenGifFragment" />
@@ -15,7 +16,8 @@
     <fragment
         android:id="@+id/fullScreenGifFragment"
         android:name="com.example.anniegif.view.FullScreenGifFragment"
-        android:label="FullScreenGifFragment" >
+        android:label="FullScreenGifFragment"
+        tools:layout="@layout/fragment_full_screen_gif">
         <argument
             android:name="item"
             app:argType="com.example.anniegif.model.GifInfo" />
